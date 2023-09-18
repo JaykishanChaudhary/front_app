@@ -1,0 +1,166 @@
+.tablediv{
+    min-height: 48rem;
+    width: 82rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 22rem;
+    margin-top: 2rem;
+}
+
+#buttondiv{
+   display: block;
+   margin-left: 30rem;
+}
+
+.custom-button{
+    height: 2.5rem;
+    width: 8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+#button1{
+    border-top: 1px solid blue;
+    border-left: 1px solid blue;
+    border-bottom: 1px solid blue;
+    border-right: none;
+}
+
+#button2{
+    border-right: 1px solid blue;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    border-left: none;
+}
+
+#searchdiv{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-left: 20rem;
+    margin-top: 3rem;
+}
+
+#searchlabel{
+    font-size: large;
+    font-weight: 600;
+}
+
+#searchoption{
+    height: 2.5rem;
+    width: 9rem;
+    color: rgb(96, 100, 100);
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size:large;
+}
+
+label{
+    margin-top: 0.5rem;
+}
+#searchinput{
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 20px;
+    border: 1px solid blue;
+    font-size: large;
+    font-weight: 300;
+}
+
+#labelselectdiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: .1rem;
+}
+
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999; 
+    pointer-events: none; 
+  }
+
+.searchicon{
+    margin-top: 0.8rem;
+    margin-left: -6rem;
+    background-color: blue;
+}
+
+.filterimg{
+    margin-left: 21rem;
+}
+
+#table{
+    height: 30rem;
+    width: 75rem;
+    /* border: 1px solid black; */
+    margin-left: 3.5rem;
+    margin-top: 2rem;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead{
+    background-color:rgb(81, 79, 79);
+}
+
+td{
+    border: 1px solid rgb(151, 148, 148);
+    padding: 8px;
+    color: rgb(139, 144, 144);;
+}
+
+th{
+    border: 1px solid rgb(151, 148, 148);
+    padding: 8px;
+}
+
+h1{
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #d8e2f2;
+  }
+
+.delete-icon{
+    margin-top: 0rem;
+}
+
+.detail-button{
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    
+}
+
+.update-div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#button-box{
+    display: flex;
+    flex-direction: row;
+    gap: 25rem;
+}
+
+.task-button{
+    height: 2.5rem;
+    width: 8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 2rem;
+    border: 1px solid blue;
+    color: blue;
+}

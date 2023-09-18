@@ -1,0 +1,38 @@
+.dashdiv{
+    height: 4rem;
+    width: 82rem;
+    margin-left: 22rem;
+    margin-top: -58rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 55rem;
+}
+
+h2{
+    color: rgb(49, 59, 108);
+    display: inline;
+}
+
+#image{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.imgdiv{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+#iconimage{
+    margin-top: 0.5rem;
+}
+
+#welpara{
+    color: rgb(96, 100, 100);
+    font-weight: 600;
+}

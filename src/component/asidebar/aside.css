@@ -1,0 +1,29 @@
+.sidenavbar{
+    display:flex;
+    flex-direction: column;
+    height: 60rem;
+    width: 20rem;
+    border-right: 1px solid rgb(214, 204, 204);
+    border-top: 1px solid rgb(245, 243, 243);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    border-bottom:1px solid rgb(245, 243, 243); ;
+}
+
+.navbar:hover{
+    background-color: blue;
+}
+
+.imageicon{
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+.txthead{
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+    color: rgb(96, 100, 100);
+}
