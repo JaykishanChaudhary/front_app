@@ -46,7 +46,7 @@ function TableBox(){
     useEffect(()=>{
         console.log(isfiltering);
         if(!isfiltering){
-            axios.get(`http://localhost:5000/task`).then((response)=>{
+            axios.get(`https://main.dt1v12isv5ait.amplifyapp.com/task`).then((response)=>{
                 setfilteredData(response.data.result)
                 console.log(response)
             }).catch((err)=>{
@@ -61,7 +61,7 @@ function TableBox(){
     function FilterdFunc(){
            
                 setisfiltering(true);
-                axios.get(`http://localhost:5000/task/filter?field=${SearchField}&value=${SearchData}`).then((response)=>{
+                axios.get(`https://main.dt1v12isv5ait.amplifyapp.com/task/filter?field=${SearchField}&value=${SearchData}`).then((response)=>{
                     setfilteredData(response.data.result);
                 }).catch((err)=>{
                     console.error(err);
@@ -73,7 +73,7 @@ function TableBox(){
    
 
    function HandleDelete(taskId){
-        axios.delete(`http://localhost:5000/task/${taskId}`).then((response)=>{
+        axios.delete(`https://main.dt1v12isv5ait.amplifyapp.com/task/${taskId}`).then((response)=>{
             console.log(`deleted successfully`);
             const updatedData = filteredData.filter((data) => data._id !== taskId);
             setfilteredData(updatedData);
