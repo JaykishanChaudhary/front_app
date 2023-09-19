@@ -27,7 +27,7 @@ function UpdateDetail(){
             description:selectedItem.description
         }
         try {
-            await axios.put(`https://main.dt1v12isv5ait.amplifyapp.com/task/${selectedItem._id}`, UpdateData);
+            await axios.put(`https://back-app-t9ef.onrender.com/task/${selectedItem._id}`, UpdateData);
             console.log('Data updated successfully');
             navigate('/home');
           } catch (error) {
