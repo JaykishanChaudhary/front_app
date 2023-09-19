@@ -22,7 +22,7 @@ function CreateForm(){
     }
 
     async function NaviCreate(){
-        axios.post('https://main.dt1v12isv5ait.amplifyapp.com/task',formData).then((response)=>{
+        axios.post('http://localhost:5000/task',formData).then((response)=>{
             console.log('response',response);
             navigate('/home')
          }).catch((err)=>{

@@ -1,8 +1,10 @@
-import './tablebox.css'
+import '../tablebox/tablebox.css'
 import {useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-
+import Delete from '../../asset/delete.png'
+import Lens from '../../asset/lens.png'
+import Filter from '../../asset/filter.png'
 
 
 function TableBox(){
@@ -46,7 +48,7 @@ function TableBox(){
     useEffect(()=>{
         console.log(isfiltering);
         if(!isfiltering){
-            axios.get(`https://main.dt1v12isv5ait.amplifyapp.com/task`).then((response)=>{
+            axios.get(`http://localhost:5000/task`).then((response)=>{
                 setfilteredData(response.data.result)
                 console.log(response)
             }).catch((err)=>{
@@ -61,7 +63,7 @@ function TableBox(){
     function FilterdFunc(){
            
                 setisfiltering(true);
-                axios.get(`https://main.dt1v12isv5ait.amplifyapp.com/task/filter?field=${SearchField}&value=${SearchData}`).then((response)=>{
+                axios.get(`http://localhost:5000/task/filter?field=${SearchField}&value=${SearchData}`).then((response)=>{
                     setfilteredData(response.data.result);
                 }).catch((err)=>{
                     console.error(err);
@@ -73,7 +75,7 @@ function TableBox(){
    
 
    function HandleDelete(taskId){
-        axios.delete(`https://main.dt1v12isv5ait.amplifyapp.com/task/${taskId}`).then((response)=>{
+        axios.delete(`http://localhost:5000/task/${taskId}`).then((response)=>{
             console.log(`deleted successfully`);
             const updatedData = filteredData.filter((data) => data._id !== taskId);
             setfilteredData(updatedData);
@@ -116,8 +118,8 @@ function TableBox(){
                 </div>
                 
                 <input type='text' id='searchinput' onChange={HandleSearchData} placeholder='Search by Task id'/>
-                <img width="20" height="20" className="searchicon" onClick={FilterdFunc} src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/external-search-interface-kiranshastry-gradient-kiranshastry.png" alt="external-search-interface-kiranshastry-gradient-kiranshastry"/>
-                <img width="40" height="40" className='filterimg'  src="https://img.icons8.com/fluency/48/filter--v1.png" alt="filter--v1"/>
+                <img width="20" height="20" className="searchicon" onClick={FilterdFunc} src={Lens} alt="external-search-interface-kiranshastry-gradient-kiranshastry"/>
+                <img width="40" height="40" className='filterimg'  src={Filter} alt="filter--v1"/>
             </div>
             <div id='table'>
                 <table>
@@ -145,7 +147,7 @@ function TableBox(){
                             <td>
                                 <div className='update-div'>
                                     <button className='detail-button' onClick={()=>ViewClick(data)}  >VIEW DETAIL</button>
-                                    <img width="25" height="25" className='delete-icon' onClick={()=>{HandleDelete(data._id)}} src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
+                                    <img width="25" height="25" className='delete-icon' onClick={()=>{HandleDelete(data._id)}} src={Delete} alt="delete--v1"/>
                                 </div>
                             </td>
                         </tr>
