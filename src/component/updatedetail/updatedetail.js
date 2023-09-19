@@ -29,7 +29,7 @@ function UpdateDetail(){
         try {
             await axios.put(`https://back-app-t9ef.onrender.com/task/${selectedItem._id}`, UpdateData);
             console.log('Data updated successfully');
-            navigate('/home');
+            navigate('/');
           } catch (error) {
             console.error('Error updating data:', error);
           }

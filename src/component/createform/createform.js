@@ -24,7 +24,7 @@ function CreateForm(){
     async function NaviCreate(){
         axios.post('https://back-app-t9ef.onrender.com/task',formData).then((response)=>{
             console.log('response',response);
-            navigate('/home')
+            navigate('/')
          }).catch((err)=>{
             console.error(err);
         })
