@@ -27,7 +27,7 @@ function UpdateDetail(){
             description:selectedItem.description
         }
         try {
-            await axios.put(`https://back-app-t9ef.onrender.com/task/${selectedItem._id}`, UpdateData);
+            await axios.put(`http://52.90.211.46:5000/task/${selectedItem._id}`, UpdateData);
             console.log('Data updated successfully');
             navigate('/');
           } catch (error) {
